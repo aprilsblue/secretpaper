@@ -1,0 +1,77 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-image : url('bk-freeze.jpg');
+    background-size : 100% 100%;
+}
+
+#display {
+    text-align : center;
+    margin-bottom : 40px;
+}
+
+.container {
+    position : relative;
+    top : 50px;
+}
+
+.title {
+    font-size : 15pt;
+    margin : 10px;
+}
+
+#smile {
+    position : relative;
+    top : 150px;
+    left : 50%;
+    margin-left : -200px;
+    height : 400px;
+    width : 400px;
+}
+
+#smile_search {
+    position : relative;
+    top : 0px;
+    left : 50%;
+    margin-left : -100px;
+    height : 200px;
+    width : 200px;
+    margin-bottom : 30px;
+}
+
+#getid {
+    position : relative;
+    top : -60px;
+    text-align : center;
+}
+
+#getpw {
+    position : relative;
+    top : -25px;
+    text-align : center;
+}
+
+#idid {
+    position : relative;
+    text-align : center;
+    top : -130px;
+    font-size : 15pt;
+}
+
+#pwpw {
+    position : relative;
+    text-align : center;
+    top : -125px;
+    font-size : 15pt;
+}
+
+#search {
+    position : relative;
+    top : -80px;
+}
+
+#back1 {
+    position : relative;
+    top : -80px;
+}

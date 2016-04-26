@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="container col-md-4">
+        <%#= form_tag "/write", method: "post" do %>
+        <form method="POST" action="/write">
+          <div class="form-group">
+            <label class="title" for="exampleInputNickName">Nickname</label>
+            <input name="nickname" id="nickname" type="text" class="form-control" placeholder="Input your nickname"/>
+            <label class="title" for="exampleInputStroy">Story</label>
+            <textarea name="content" id="content" class="form-control" rows=10 placeholder="Inpu your Story"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default btn-lg btn-block">Send</button>
+          <button type="button" id="reply" class="btn btn-success btn-lg btn-block" onclick="location.href='/reply'">Reply</button>
+          <button type="button" id="mypage" class="btn btn-warning btn-lg btn-block" onclick="location.href='/search'">MyPaper</button>
+        </form>
+        <%# end %>
+    </div>
+    <div class="col-md-4"></div>
+</div>

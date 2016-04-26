@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="container col-md-4">
+        <form method="POST" action="/search_process">
+          <div class="form-group">
+            <label class="title" for="exampleInputNickName">Id</label>
+            <input name="id" type="text" class="form-control" placeholder="Input your Id"/>
+            <label class="title" for="exampleInputNickName">Password</label>
+            <input name="pw" type="text" class="form-control" placeholder="Input your Password"/>
+          </div>
+          <img id="smile_search" src="<%= asset_path("smile.jpg") %>"/>
+          <p id="idid">Id</p>
+          <p id="pwpw">Password</p>
+          <button type="submit" id="search" class="btn btn-default btn-lg btn-block">Search</button>
+          <button type="button" id="back1" class="btn btn-success btn-lg btn-block" onclick="history.back();">Back</button>
+        </form>
+        <%# end %>
+    </div>
+    <div class="col-md-4"></div>
+</div>
