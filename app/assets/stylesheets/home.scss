@@ -2,13 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
+    width : 100%;
     background-image : url('bk-freeze.jpg');
-    background-size : 100% 100%;
+    background-size : cover;
 }
 
-#display {
-    text-align : center;
+#title {
     margin-bottom : 40px;
+    text-align : center;
 }
 
 .container {
@@ -28,6 +29,25 @@ body {
     margin-left : -200px;
     height : 400px;
     width : 400px;
+}
+
+#airplane {
+    position : relative;
+    top : 150px;
+    left : 50%;
+    margin-left : -150px;
+    height : 300px;
+    width : 300px;
+}
+
+.message {
+    position : relative;
+    top : 170px;
+    left : 50%;
+    width : 400px;
+    margin-left : -200px;
+    font-size : 13pt;
+    
 }
 
 #smile_search {
@@ -74,4 +94,96 @@ body {
 #back1 {
     position : relative;
     top : -80px;
+    margin-bottom : 20px;
+}
+
+#back {
+    margin-bottom : 20px;
+}
+
+.signlabel, .sign {
+    position : relative;
+    top : 20px;
+    left : 20px;
+    font-size : 15pt;
+    margin-right : 20px;
+    display : inline;
+}
+
+.signinFrm {
+    position : relative;
+    top : 60px;
+    left : 50%;
+    width : 180px;
+    margin-left : -90px;
+}
+
+.signupFrm {
+    position : relative;
+    top : 60px;
+    left : 50%;
+    width : 250px;
+    margin-left : -125px;
+}
+
+// Display Page
+.selectAirplane {
+    position : absolute;
+}
+
+#airplane1 {
+    top : 50px;
+    left : 133px;
+    height : 100px;
+    width : 100px;
+}
+
+#airplane2 {
+    top : 100px;
+    left : 0px;
+    height : 150px;
+    width : 150px;
+}
+
+#airplane3 {
+    top : 150px;
+    left : 350px;
+    height : 200px;
+    width : 200px;
+}
+
+#airplane4 {
+    top : 20px;
+    left : 250px;
+    height : 180px;
+    width : 180px;
+}
+
+#airplane5 {
+    top : 200px;
+    left : 150px;
+    height : 160px;
+    width : 160px;
+}
+
+#airplane6 {
+    top : 100px;
+    left : 250px;
+    height : 170px;
+    width : 200px;
+}
+
+#airplane7 {
+    top : 150px;
+    left : 50px;
+    height : 200px;
+    width : 160px;
+}
+
+#replylabel {
+    position : relative;
+    width : 400px;
+    top : 350px;
+    left : 50%;
+    margin-left : -200px;
 }

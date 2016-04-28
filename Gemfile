@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'mailgun_rails'
+
 gem 'devise'
 
 gem 'letter_opener', group: :development

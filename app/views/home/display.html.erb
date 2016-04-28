@@ -1,25 +1,48 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <h1 id="display">Display Page</h1>
-            </div>
-        <div class="col-md-3"></div>
-    </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h1 id="title">Display Page</h1>
+      </div>
+    <div class="col-md-3"></div>
+  </div>
 
-    <% @papers.each do |p| %>
-        <div class="row">
-            <div class="col-md-3"></div>
-                <div class="alert bg-info col-md-6">
-                    ID : <%= p.id %> <br>
-                    Content : <%= p.content %><br>
-                    Nickname : <%= p.nickname %><br>
-                    PW : <%= p.password %><br>
-                    Date : <%= p.created_at %><br>
-                    <a href="/delete/<%= p.id %>">[삭제]</a>
-                    <a href="/update_view/<%= p.id %>">[수정]</a>
-                </div>
-            <div class="col-md-3"></div>
+  <% @papers.each do |p| %>
+    <div class="row">
+      <div class="col-md-3"></div>
+        <div class="alert bg-info col-md-6">
+          ID : <%= p.id %> <br>
+          Email : 
+          <% if p.user.email != nil %>
+              <%= p.user.email %><br>
+          <% else %>
+              Unregisted<br>
+          <% end %>
+          Nickname : <%= p.nickname %><br>
+          Content : <%= p.content %><br>
+          Password :
+          <% if p.password != nil %>
+              <%= p.password %><br>
+          <% else %>
+              None<br>
+          <% end %>
+          Date : <%= p.created_at %><br>
+          
+          <a href="/delete/<%= p.id %>">[삭제]</a>
+          <a href="/update_view/<%= p.id %>">[수정]</a>
+          
+          <%  p.replies.each do |r| %>
+            <div class="alert alert-danger" style="margin-top:10px;">
+              ID : <%= r.id %><br>
+              Email : <%= r.email %><br>
+              Nickname : <%= r.nickname %><br>
+              Content : <%= r.content %><br>
+              Date : <%= r.created_at %><br>
+            </div>
+          <% end %>
+    
         </div>
-    <% end %>
+      <div class="col-md-3"></div>
+    </div>
+  <% end %>
 </div>

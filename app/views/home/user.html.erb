@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 id="display">User Page</h1>
+            </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <% @users.each do |user| %>
+        <div class="row">
+            <div class="col-md-3"></div>
+                <div class="alert bg-info col-md-6">
+                    No : <%= user.id %> <br>
+                    Email : <%= user.email %> <br>
+                    Date : <%= user.created_at.in_time_zone("Asia/Seoul").strftime("%Y년%m월%d일 %H시%M분%S초") %><br>
+                </div>
+            <div class="col-md-3"></div>
+        </div>
+    <% end %>
+</div>

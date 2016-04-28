@@ -4,15 +4,19 @@ Rails.application.routes.draw do
   
   get '/' => 'home#index'
   get 'display' => 'home#display'
-  get 'reply' => 'home#reply'
   get 'mypaper/:id' => 'home#mypaper'
   get 'search' => 'home#search'
   get 'delete/:id' => 'home#delete'
   get 'update_view/:id' => 'home#update_view'
+  get 'user' => 'home#user'
+  get 'reply' => 'home#reply'
+  get 'reply_content' => 'home#reply_content'
   
-  post 'write' => 'home#write'
+  post 'write' => 'home#write' # 회원전용 글쓰기 페이지
+  post 'un_write' => 'home#un_write' # 비회원전용 글쓰기 페이지
   post 'search_process' => 'home#search_process'
   post 'update/:id' => 'home#update'
+  post 'reply_process' => 'home#reply_process'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

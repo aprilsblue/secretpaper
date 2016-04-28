@@ -15,17 +15,19 @@
 </head>
 <body>
   <!-- devise flash messages -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <% if notice != nil  %>
+    <p class="notice"><%= notice %></p>
+  <% elsif alert != nil %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+  <% if user_signed_in? %>
+    <p class = "signlabel">현재 로그인된 유저 : <%= current_user.email %></p>
+    <p class = "sign"><%= link_to "Signout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <% else %>
+    <p class = "sign"><%= link_to "Signin", new_user_session_path %></p>
+  <% end %>
 
 <%= yield %>
-
-  <% if user_signed_in? %>
-    <p>현재 로그인된 유저의 이메일 : <%= current_user.email %></p>
-    <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
-  <% else %>
-    <p><%= link_to "로그인", new_user_session_path %></p>
-  <% end %>
 
 </body>
 </html>

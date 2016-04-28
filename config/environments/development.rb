@@ -1,5 +1,12 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  #mailgun_rails
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+        api_key: 'key-1ad68f32c5ffc8207c5213573564de3d',
+        domain: 'sandboxff9eaf39dc1c4f9793c25372f2884306.mailgun.org'
+  }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -39,7 +46,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   
-  config.action_mailer.default_url_options = { host: 'https://ide.c9.io/aprilsblue/secret:80' }
+  # config.action_mailer.default_url_options = { host: 'https://ide.c9.io/aprilsblue/secretpaper' }
     
-  config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.delivery_method = :letter_opener
 end

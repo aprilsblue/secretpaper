@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="container col-md-4">
+        <h1 id="title">당신이 선택한 Paper?</h1>
+        <form method="POST" action="/reply_process">
+          <div class="form-group">
+            <label class="title" for="exampleInputNickName">Nickname</label>
+            <input id="nickname" type="text" class="form-control" value="<%= @paper.nickname %>" disabled="disabled"/>
+            <label class="title" for="exampleInputStroy">Story</label>
+            <textarea id="content" class="form-control" rows=10 disabled="disabled"><%= @paper.content %></textarea>
+            <label class="title" for="exampleInputNickName">Nickname</label>
+            <input name="nickname" id="nickname" type="text" class="form-control"/>
+            <label class="title" for="exampleInputStroy">Reply</label>
+            <textarea name="content" id="content" class="form-control" rows=10 placeholder="Please, Write your story~!"></textarea>
+            <input type="hidden" name="paperid" value="<%= @paper.id %>"/>
+          </div>
+          <button type="submit" class="btn btn-default btn-lg btn-block">Reply</button>
+          <button type="button" id="back" class="btn btn-success btn-lg btn-block" onclick="history.back();">Back</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
